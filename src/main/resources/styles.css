@@ -1,0 +1,128 @@
+/* Root styles for the entire application */
+.root {
+  -fx-background-color: #ffffff;
+  -fx-font-family: "Arial", sans-serif;
+}
+
+/* Labels */
+.label {
+  -fx-text-fill: #1b263b;
+  -fx-font-size: 14px;
+  -fx-font-weight: bold;
+}
+
+/* Text fields, password fields, combo boxes, and date pickers */
+.text-field,
+.password-field,
+.combo-box,
+.date-picker {
+  -fx-background-color: #f5f6f5;
+  -fx-text-fill: #1b263b;
+  -fx-prompt-text-fill: #778da9;
+  -fx-border-color: #1b263b;
+  -fx-border-width: 1px;
+  -fx-border-radius: 5px;
+  -fx-padding: 8px;
+  -fx-font-size: 14px;
+}
+
+/* Buttons */
+.button {
+  -fx-background-color: #1b263b;
+  -fx-text-fill: #ffffff;
+  -fx-font-size: 14px;
+  -fx-font-weight: bold;
+  -fx-background-radius: 5px;
+  -fx-padding: 10px 20px;
+  -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 5, 0, 0, 1);
+}
+
+.button:hover {
+  -fx-background-color: #415a77;
+  -fx-cursor: hand;
+}
+
+/* TableView */
+.table-view {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #1b263b;
+  -fx-border-width: 1px;
+}
+
+.table-view .column-header-background {
+  -fx-background-color: #1b263b;
+}
+
+.table-view .column-header .label {
+  -fx-text-fill: #ffffff;
+  -fx-font-weight: bold;
+}
+
+.table-row-cell {
+  -fx-background-color: #ffffff;
+  -fx-text-fill: #1b263b;
+  -fx-border-color: #e0e1dd;
+}
+
+.table-row-cell:odd {
+  -fx-background-color: #f5f6f5;
+}
+
+.table-row-cell:selected {
+  -fx-background-color: #415a77;
+  -fx-text-fill: #ffffff;
+}
+
+/* TextArea */
+.text-area {
+  -fx-background-color: #f5f6f5;
+  -fx-text-fill: #1b263b;
+  -fx-border-color: #1b263b;
+  -fx-border-width: 1px;
+  -fx-border-radius: 5px;
+}
+
+/* PieChart */
+.pie-chart {
+  -fx-background-color: #ffffff;
+  -fx-pie-label-fill: #1b263b;
+  -fx-title-fill: #1b263b;
+  -fx-font-size: 14px;
+}
+
+/* ComboBox specific styles */
+.combo-box .list-cell {
+  -fx-background-color: #f5f6f5;
+  -fx-text-fill: #1b263b;
+}
+
+.combo-box-popup .list-view {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #1b263b;
+  -fx-border-width: 1px;
+}
+
+.combo-box-popup .list-cell:hover {
+  -fx-background-color: #415a77;
+  -fx-text-fill: #ffffff;
+}
+
+/* Alert dialog */
+.alert .dialog-pane {
+  -fx-background-color: #ffffff;
+  -fx-border-color: #1b263b;
+  -fx-border-width: 1px;
+}
+
+.alert .content.label {
+  -fx-text-fill: #1b263b;
+}
+
+.alert .button {
+  -fx-background-color: #1b263b;
+  -fx-text-fill: #ffffff;
+}
+
+.alert .button:hover {
+  -fx-background-color: #415a77;
+}
