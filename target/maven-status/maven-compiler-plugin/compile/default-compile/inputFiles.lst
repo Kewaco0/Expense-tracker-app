@@ -1,5 +1,6 @@
 C:\Users\stanl\OneDrive\Desktop\java\src\main\java\com\example\controller\SummaryController.java
 C:\Users\stanl\OneDrive\Desktop\java\src\main\java\com\example\service\ExpenseService.java
+C:\Users\stanl\OneDrive\Desktop\java\src\main\java\com\example\controller\IncomeController.java
 C:\Users\stanl\OneDrive\Desktop\java\src\main\java\com\example\model\Category.java
 C:\Users\stanl\OneDrive\Desktop\java\src\main\java\com\example\controller\ExpenseTrackerApp.java
 C:\Users\stanl\OneDrive\Desktop\java\src\main\java\com\example\util\PasswordUtil.java
@@ -8,7 +9,10 @@ C:\Users\stanl\OneDrive\Desktop\java\src\main\java\com\example\controller\Signup
 C:\Users\stanl\OneDrive\Desktop\java\src\main\java\com\example\model\Expense.java
 C:\Users\stanl\OneDrive\Desktop\java\src\main\java\com\example\service\UserService.java
 C:\Users\stanl\OneDrive\Desktop\java\src\main\java\com\example\controller\LoginController.java
+C:\Users\stanl\OneDrive\Desktop\java\src\main\java\com\example\controller\HistoryController.java
+C:\Users\stanl\OneDrive\Desktop\java\src\main\java\com\example\model\Income.java
 C:\Users\stanl\OneDrive\Desktop\java\src\main\java\com\example\service\CategoryService.java
 C:\Users\stanl\OneDrive\Desktop\java\src\main\java\com\example\controller\MainMenuController.java
 C:\Users\stanl\OneDrive\Desktop\java\src\main\java\com\example\model\User.java
 C:\Users\stanl\OneDrive\Desktop\java\src\main\java\com\example\util\HibernateUtil.java
+C:\Users\stanl\OneDrive\Desktop\java\src\main\java\com\example\service\IncomeService.java

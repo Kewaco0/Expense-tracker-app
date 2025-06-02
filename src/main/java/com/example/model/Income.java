@@ -12,8 +12,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "expenses")
-public class Expense {
+@Table(name = "incomes")
+public class Income {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -24,31 +24,25 @@ public class Expense {
     @Column(name = "amount")
     private double amount;
 
+    @Column(name = "remaining_amount")
+    private Double remainingAmount; // Changed to Double to allow null
+
     @Column(name = "date")
     private LocalDate date;
-
-    @ManyToOne
-    @JoinColumn(name = "category_id")
-    private Category category;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
-    @ManyToOne
-    @JoinColumn(name = "income_id") // New field to track the income source
-    private Income income;
-
-    public Expense() {
+    public Income() {
     }
 
-    public Expense(String description, double amount, LocalDate date, Category category, User user, Income income) {
+    public Income(String description, double amount, LocalDate date, User user) {
         this.description = description;
         this.amount = amount;
+        this.remainingAmount = amount; // Initialize remainingAmount to the full amount
         this.date = date;
-        this.category = category;
         this.user = user;
-        this.income = income;
     }
 
     public int getId() {
@@ -75,6 +69,14 @@ public class Expense {
         this.amount = amount;
     }
 
+    public Double getRemainingAmount() {
+        return remainingAmount != null ? remainingAmount : 0.0;
+    } // Handle null case
+
+    public void setRemainingAmount(Double remainingAmount) {
+        this.remainingAmount = remainingAmount;
+    }
+
     public LocalDate getDate() {
         return date;
     }
@@ -83,27 +85,11 @@ public class Expense {
         this.date = date;
     }
 
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
-
     public User getUser() {
         return user;
     }
 
     public void setUser(User user) {
         this.user = user;
-    }
-
-    public Income getIncome() {
-        return income;
-    }
-
-    public void setIncome(Income income) {
-        this.income = income;
     }
 }

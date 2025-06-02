@@ -28,7 +28,9 @@ public class MainMenuController {
         title.setStyle("-fx-font-size: 24px;"); // Kept for emphasis, styled in CSS
 
         Button expensesButton = new Button("Manage Expenses");
+        Button incomesButton = new Button("Manage Incomes");
         Button summaryButton = new Button("View Summary & Reports");
+        Button historyButton = new Button("View Expense History");
         Button logoutButton = new Button("Logout");
 
         expensesButton.setOnAction(e -> {
@@ -38,11 +40,25 @@ public class MainMenuController {
             primaryStage.setScene(expenseScene);
         });
 
+        incomesButton.setOnAction(e -> {
+            IncomeController incomeController = new IncomeController(primaryStage, user);
+            Scene incomeScene = new Scene(incomeController.createIncomePage(), 800, 600);
+            incomeScene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
+            primaryStage.setScene(incomeScene);
+        });
+
         summaryButton.setOnAction(e -> {
             SummaryController summaryController = new SummaryController(primaryStage, user);
             Scene summaryScene = new Scene(summaryController.createSummaryPage(), 800, 600);
             summaryScene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
             primaryStage.setScene(summaryScene);
+        });
+
+        historyButton.setOnAction(e -> {
+            HistoryController historyController = new HistoryController(primaryStage, user);
+            Scene historyScene = new Scene(historyController.createHistoryPage(), 800, 600);
+            historyScene.getStylesheets().add(getClass().getResource("/styles.css").toExternalForm());
+            primaryStage.setScene(historyScene);
         });
 
         logoutButton.setOnAction(e -> {
@@ -52,7 +68,9 @@ public class MainMenuController {
             primaryStage.setScene(loginScene);
         });
 
-        layout.getChildren().addAll(title, expensesButton, summaryButton, logoutButton);
+        // Add all children in a single call to avoid duplicates
+        layout.getChildren().addAll(title, expensesButton, incomesButton, summaryButton, historyButton, logoutButton);
+
         return layout;
     }
 }

@@ -1,10 +1,12 @@
 package com.example.util;
 
-import com.example.model.Category;
-import com.example.model.Expense;
-import com.example.model.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+
+import com.example.model.Category;
+import com.example.model.Expense;
+import com.example.model.Income;
+import com.example.model.User;
 
 public class HibernateUtil {
     private static final SessionFactory sessionFactory;
@@ -15,6 +17,7 @@ public class HibernateUtil {
                 .addAnnotatedClass(Category.class)
                 .addAnnotatedClass(Expense.class)
                 .addAnnotatedClass(User.class)
+                .addAnnotatedClass(Income.class)
                 .buildSessionFactory();
     }
 
